@@ -9,11 +9,18 @@
 import UIKit
 
 class OrderListPageViewController: UIViewController {
-
+    @IBOutlet var userFullNameLabel: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func signOutButtonClicked(_ sender: Any) {
+    }
+    @IBAction func loadMembersButtonClicked(_ sender: Any) {
     }
     
 

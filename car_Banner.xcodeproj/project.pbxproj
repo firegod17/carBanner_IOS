@@ -43,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE53CBC8235CCBF8006500FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FE4F5A0A235A0DAC0075CE55 /* OrderListPageViewController.swift */,
+				FE757A812359F6CA00B3CD89 /* SignInViewController.swift */,
+				FE757A832359F8EF00B3CD89 /* RegisterUserViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		FE757A612359F63300B3CD89 = {
 			isa = PBXGroup;
 			children = (
@@ -66,9 +76,7 @@
 				FE757A6F2359F63400B3CD89 /* SceneDelegate.swift */,
 				FE757A712359F63400B3CD89 /* ViewController.swift */,
 				FE757A732359F63400B3CD89 /* Main.storyboard */,
-				FE4F5A0A235A0DAC0075CE55 /* OrderListPageViewController.swift */,
-				FE757A812359F6CA00B3CD89 /* SignInViewController.swift */,
-				FE757A832359F8EF00B3CD89 /* RegisterUserViewController.swift */,
+				FE53CBC8235CCBF8006500FE /* Controller */,
 				FE757A762359F63400B3CD89 /* Assets.xcassets */,
 				FE757A782359F63400B3CD89 /* LaunchScreen.storyboard */,
 				FE757A7B2359F63400B3CD89 /* Info.plist */,

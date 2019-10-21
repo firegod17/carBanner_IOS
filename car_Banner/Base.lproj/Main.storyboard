@@ -99,7 +99,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Z2I-On-tsM">
                                 <rect key="frame" x="20" y="143" width="306" height="34"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="GIv-DV-UYQ">
                                 <rect key="frame" x="20" y="185" width="306" height="34"/>
@@ -179,10 +179,10 @@
             </objects>
             <point key="canvasLocation" x="1041" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--Order List Page View Controller-->
         <scene sceneID="Qai-Ju-tPh">
             <objects>
-                <viewController id="b6m-Ju-ePk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderListPageViewController" id="b6m-Ju-ePk" customClass="OrderListPageViewController" customModule="car_Banner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lo6-nc-9NN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,6 +193,9 @@
                                     <navigationItem title="Order Page" id="st8-DC-ZD0">
                                         <barButtonItem key="leftBarButtonItem" title="Sign out " id="ldN-1m-eNs">
                                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <connections>
+                                                <action selector="signOutButtonClicked:" destination="b6m-Ju-ePk" id="Ldf-CY-UVm"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -203,6 +206,9 @@
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Load Mamer Profile"/>
+                                <connections>
+                                    <action selector="loadMembersButtonClicked:" destination="b6m-Ju-ePk" eventType="touchUpInside" id="R2o-T5-Nzr"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J00-50-1mc">
                                 <rect key="frame" x="20" y="150" width="374" height="20"/>
@@ -225,6 +231,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H0S-T6-KmY"/>
                     </view>
+                    <connections>
+                        <outlet property="userFullNameLabel" destination="Lo6-nc-9NN" id="kqZ-fY-7vh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0o-c9-tD6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
